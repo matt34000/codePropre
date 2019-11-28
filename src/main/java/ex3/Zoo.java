@@ -6,10 +6,10 @@ package ex3;
 public class Zoo {
 
 	private String nom;
-	private SavaneAfricaine savaneAfricaine;
-	private ZoneCarnivore zoneCarnivore;
-	private FermeReptile fermeReptile;
-	private Aquarium aquarium;
+	private SavaneAfricaine SavaneAfricaine = new SavaneAfricaine();
+	private ZoneCarnivore ZoneCarnivore = new ZoneCarnivore();
+	private FermeReptile FermeReptile = new FermeReptile();
+	private Aquarium Aquarium = new Aquarium();
 	
 	public Zoo(String nom){
 		this.nom = nom;
@@ -17,24 +17,24 @@ public class Zoo {
 	
 	public void addAnimal(String nomAnimal, String typeAnimal, String comportement){
 		if (typeAnimal.equals("MAMMIFERE") && comportement.equals("CARNIVORE")){
-			zoneCarnivore.addAnimal(typeAnimal, nomAnimal, comportement);
+			ZoneCarnivore.addAnimal(nomAnimal, typeAnimal, comportement);
 		}
 		else if (typeAnimal.equals("MAMMIFERE") && comportement.equals("HERBIVORE")){
-			savaneAfricaine.addAnimal(typeAnimal, nomAnimal, comportement);
+			SavaneAfricaine.addAnimal(nomAnimal, typeAnimal, comportement);
 		}
 		else if (typeAnimal.equals("REPTILE")){
-			fermeReptile.addAnimal(typeAnimal, nomAnimal, comportement);
+			FermeReptile.addAnimal(nomAnimal, typeAnimal, comportement);
 		}
 		else if (typeAnimal.equals("POISSON")){
-			aquarium.addAnimal(typeAnimal, nomAnimal, comportement);
+			Aquarium.addAnimal(nomAnimal, typeAnimal, comportement);
 		}
 	}
 	
 	public void afficherListeAnimaux(){
-		savaneAfricaine.afficherListeAnimaux();
-		zoneCarnivore.afficherListeAnimaux();
-		fermeReptile.afficherListeAnimaux();
-		aquarium.afficherListeAnimaux();
+		SavaneAfricaine.afficherListeAnimaux();
+		ZoneCarnivore.afficherListeAnimaux();
+		FermeReptile.afficherListeAnimaux();
+		Aquarium.afficherListeAnimaux();
 	}
 
 	/** Getter for nom

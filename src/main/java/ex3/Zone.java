@@ -1,16 +1,17 @@
 package ex3;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Zone {
 
-	private List<String> types;
-	private List<String> noms;
-	private List<String> comportements;
+	private List<String> types = new ArrayList<String>();
+	private List<String> noms = new ArrayList<String>();
+	private List<String> comportements = new ArrayList<String>();
 	
-	public void addAnimal(String typeAnimal, String nomAnimal, String comportement) {
-		types.add(typeAnimal);
+	public void addAnimal(String nomAnimal, String typeAnimal, String comportement) {
 		noms.add(nomAnimal);
+		types.add(typeAnimal);
 		comportements.add(comportement);
 	}
 	
